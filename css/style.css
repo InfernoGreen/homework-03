@@ -1,26 +1,35 @@
-
-:root{
+/* ROOT COLOR*/
+:root {
   /* Navy blue HEDER*/
-  --heading-color: #2E2F42;
+  --heading-color: #2e2f42;
   /* LIGHT SLATE*/
-  --address-color: #8E8F99;
+  --address-color: #8e8f99;
   /* CLOUD button, hero-text */
   --wight-color: #ffffff;
   /*SLATE*/
   --body-color: #434455;
   /*HOVER LINKS OCEAN*/
-  --hover-color: #404BBF;
-    /*iris* logo, btn*/
-    --btn-color: #4D5AE5;
-    --hero-bgc: #2E2F42;
-    
+  --hover-color: #404bbf;
+  /*iris* logo, btn*/
+  --btn-color: #4d5ae5;
+  --hero-bgc: #2e2f42;
 }
 body {
-  font-family:'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  background-color:#ffffff;
+  background-color: #ffffff;
 }
-
+/* HEDDER>>>>>>>>>>>>>>>>>> LOGO + NAV + ADDRESS*/
+.container {
+  box-sizing: border-box;
+  width: 1158px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>LOGO */
 .logo {
   font-family: 'Raleway';
   font-weight: 800;
@@ -30,29 +39,45 @@ body {
   text-transform: uppercase;
   color: #4d5ae5;
   text-decoration: none;
+  align-items: baseline;
 }
 
 .logo span {
   color: #2e2f42;
 }
-
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>NAVIGATION */
+nav {
+  flex-basis: calc((100% - 4px) / 2);
+}
 nav .link {
   letter-spacing: 0.02em;
   text-decoration: none;
   font-weight: 500;
   line-height: 1.5;
   color: var(--heading-color);
-
+  display: inline-flex;
+}
+nav li:not(:last-child) {
+  margin-right:40px;
 }
 nav .link:hover,
 nav .link:focus {
   color: var(--hover-color);
 }
+.navig_menu {
+  display: inline-flex;
+}
+.adres_menu {
+  list-style: none;
+  display: flex;
+}
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>ADDRESS*/
+li > .mail {
+  padding-right: 40px;
+}
 nav li {
   list-style: none;
 }
-
-
 .address_link {
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -62,33 +87,52 @@ nav li {
 }
 .address_link:hover,
 .address_link:focus {
-  color: #404BBF;
+  color: #404bbf;
 }
-address ul{
-  list-style:none;
-  
-}
-
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>BLOCK HERO*/
 .hero {
-background-color: var(--hero-bgc) ;
+  background-color: var(--hero-bgc);
+}
+div.container-hero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .herotitle {
-font-size: 56px;
-line-height:1.07;
-letter-spacing: 0.02em;
-color: var(--wight-color);
-  }
+  display: inline-flex;
+  margin: 0;
+  flex-direction: column;
+  font-size: 56px;
+  line-height: 1.07;
+  letter-spacing: 0.02em;
+  color: var(--wight-color);
+  margin-top: 188px;
+}
 .herobtn {
   background-color: var(--btn-color);
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--wight-color);
+  margin-top: 48px;
+  padding: 16px 32px;
+  border-radius: 4px;
+  margin-bottom: 188px;
 }
 .herobtn:hover {
   background: var(--hover-color);
 }
-
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>MOTIVATION SECTION*/
+.container-m {
+  box-sizing: border-box;
+  width: 1158px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
 .motivation.title {
   font-weight: 500;
   font-size: 20px;
@@ -96,89 +140,166 @@ color: var(--wight-color);
   color: var(--heading-color);
   letter-spacing: 0.02em;
 }
-.motivation ul{
+.motivation.text {
+  line-height: 1.5;
+  color: var(--body-color);
+  letter-spacing: 0.02em;
+}
+.section-title {
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--heading-color);
+}
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Our Services*/
+/*THIS container*/
+.container-wawdoing {
+  display: flex;
   list-style: none;
+  flex-direction: row;
+  box-sizing: border-box;
+  width: 1158px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  align-items: flex-start;
 }
-.motivation.text{
-line-height: 1.5;
-color: var(--body-color);
-letter-spacing: 0.02em;
-}
-.section-title{
-font-size: 36px;
-line-height: 1.11;
-text-align: center;
-letter-spacing: 0.02em;
-text-transform: capitalize;
-color:var(--heading-color) ;
-}
-.wawdoing ul{
-  list-style: none;
-}
-.team ul{
-  list-style: none;
-}
-.team-name{
-font-weight: 500;
-font-size: 20px;
-line-height: 1.2;
-letter-spacing: 0.02em;
-color:var(--heading-color);
-}
-.team-job{
-line-height: 1.5;
-letter-spacing: 0.02em;
-color: var(--body-color);
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Our TEAM*/
 
+.section-title{
+  margin-top: 120px;
+  padding-bottom: 120px;
 }
-.footer{
-  background-color:var(--heading-color);
+.container-team-card {
+    box-sizing: border-box;
+    width: 1158px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    list-style: none;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-bottom: 120px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
+    gap: 32px;
 }
-.footer.logo{
-line-height: 21px;
-letter-spacing: 0.03em;
-text-transform: uppercase;
-color: var(--btn-color);
-text-decoration: none;
+.team-list{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
 }
-.footer.logo span{
-  color: #F4F4FD;
+.team-name {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--heading-color); 
 }
-.footer.text{
-line-height: 1.5;
-letter-spacing: 0.02em;
-color: #E7E9FC;
-}
-.project li{
-  list-style: none;
-}
-.project button{
-background: #F4F4FD;
-border: 1px solid #E7E9FC;
-border-radius: 4px;
-font-family: 'Roboto';
-font-size: 16px;
-line-height: 1.5;
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: 0.04em;
-color: var(--btn-color);
-}
-.project button:hover,
-.project button:focus{
-  background: var(--hover-color);
-  color: var(--wight-color);
-}
-.project-title{
-font-weight: 500;
-font-size: 20px;
-line-height: 1.5;
-letter-spacing: 0.02em;
-color: var(--heading-color);
-}
-.project-text{
+.team-job {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--body-color);
 }
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>FOOTER>>>LOGO+TEXT*/
+.footer {
+  background-color: var(--heading-color);
+}
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>LOGO*/
+
+.footer.logo {
+  line-height: 21px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--btn-color);
+  text-decoration: none;
+  margin-top: 100px;
+}
+.footer.logo span {
+  color: #f4f4fd;
+}
+
+.footer.text {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #e7e9fc;
+  width: 264px;
+  height: 110px;
+  margin-bottom: 100px;
+}
+
+.container-footer{
+  box-sizing: border-box;
+  width: 1158px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction:column;
+  
+}
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PROGECT LIST( NAVIGATION IN HEADER)*/
+.container-main-portf{
+  display: flex;
+  box-sizing: border-box;
+    width: 1158px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    
+}
+.portf_navig_container {
+  display: inline-flex;
+  align-items:center; 
+    justify-content: center;
+}
+.portf_navig_container li{
+  margin-top: 96px;
+  margin-bottom:72px ;
+  flex-direction: row;
+  padding: 0px;
+  gap: 24px;
+}
+.portf_navig_container button{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 12px 24px;
+  gap: 24%;
+}
+.card{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+.card.set{
+  display: inline;
+  flex;flex-direction: column;
+}
+.project li {
+  list-style: none;
+}
+.project button {
+  background: #f4f4fd;
+  border: 1px solid #e7e9fc;
+  border-radius: 4px;
+  font-family: 'Roboto';
+  font-size: 16px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: var(--btn-color);
+}
+.project button:hover,
+.project button:focus {
+  background: var(--hover-color);
+  color: var(--wight-color);
+}
+
+
