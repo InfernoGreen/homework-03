@@ -282,7 +282,10 @@ div.container-hero {
   padding: 100px 0;
 }
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PROGECT LIST( NAVIGATION IN HEADER)*/
-
+.container-main-portf.container{
+  padding-top: 96px;
+  padding-bottom: 72px;
+}
 .container-main-portf {
   display: flex;
   box-sizing: border-box;
@@ -292,6 +295,7 @@ div.container-hero {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
 }
 .portf_navig_container {
   display: inline-flex;
@@ -299,6 +303,7 @@ div.container-hero {
   justify-content: center;
   column-gap: 24px;
   margin: 0px;
+  
 }
 .portf_navig_container li {
   flex-direction: row;
