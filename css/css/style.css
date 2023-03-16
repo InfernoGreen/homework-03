@@ -31,20 +31,32 @@ ul {
   padding: 0;
 }
 button{
-  border-radius: 4px;
-  background: var(--btn-color);
   cursor: pointer;
 }
+)
 img{
   display: block;
   max-width: 100%;
   height: auto;
 }
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .section {
   padding: 120px 0;
 }
 .container {
-  
+  padding-left: 15px;
+  padding-right: 15px;
   width: 1158px;
   margin-left: auto;
   margin-right: auto;
@@ -91,6 +103,7 @@ img{
   line-height: 1.5;
   color: var(--heading-color);
   display: inline-flex;
+  padding: 24px 0;
 }
 .link-menu:hover,
 .link-menu:focus{
@@ -100,10 +113,6 @@ img{
   margin-right: 40px;
 }
 
-.navig_menu .link-menu:active {
-  background: var(--hover-color);
-  color: var(--wight-color);
-}
 .navig_menu {
   display: inline-flex;
 }
@@ -138,7 +147,7 @@ img{
   padding-top: 188px;
   padding-bottom: 188px;
 }
-div.container-hero {
+.container-hero {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -158,6 +167,8 @@ div.container-hero {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--wight-color);
+  background: var(--btn-color);
+  cursor: pointer;
   font-size: 16px;
   margin-top: 48px;
   padding: 16px 32px;
@@ -166,19 +177,17 @@ div.container-hero {
   background: var(--hover-color);
 }
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>MOTIVATION SECTION*/
-.tit-hidd {
-  display: inline;
-  visibility: hidden;
-}
-.container-hero{
-  padding: 0;
-}
+
+
 .container-m {
   box-sizing: border-box;
   width: 1158px;
   display: flex;
   align-items: center;
   list-style: none;
+}
+.container-m :not(:last-child){
+  margin-right:24px ;
 }
 .motivation.title {
   font-weight: 500;
@@ -220,7 +229,7 @@ div.container-hero {
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Our TEAM*/
 .team {
   background: #f4f4fd;
-  padding: 120px 156px;
+  padding: 120px 0;
 }
 .team-photo{
   display: block;
@@ -234,11 +243,8 @@ div.container-hero {
   list-style: none;
   flex-wrap: nowrap;
   justify-content: space-evenly;
+  text-align: center;
 }
-.container-team-card :not(:last-child){
-  margin-right: 24px;
-}
-
 .team-list {
   background: #ffffff;
 }
@@ -251,7 +257,7 @@ div.container-hero {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--heading-color);
-  justify-content: center;
+  
   margin-bottom: 8px;
 }
 .team-job {
@@ -278,7 +284,9 @@ div.container-hero {
   padding: 0;
   margin:0 0 16px 0;
 }
-
+.footer {
+  padding: 100px 0;
+}
 .footer-logo span {
   color: #f4f4fd;
 }
@@ -291,7 +299,6 @@ div.container-hero {
 }
 
 .container-footer {
-  box-sizing: border-box;
   width: 1158px;
   margin-left: auto;
   margin-right: auto;
