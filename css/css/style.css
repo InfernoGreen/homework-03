@@ -237,6 +237,9 @@ img{
 .section-title {
   margin-bottom: 70px;
 }
+/* .container-footer{
+  padding: 0;
+} */
 .container-team-card {
   width: 1158px;
   display: flex;
@@ -302,7 +305,6 @@ img{
   width: 1158px;
   margin-left: auto;
   margin-right: auto;
-  padding: 100px 0;
 }
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PROGECT LIST( NAVIGATION IN HEADER)*/
 
